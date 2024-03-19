@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <!-- <link rel="stylesheet" href="~/SortVisualizer.styles.css" /> -->
+</head>
+<body>
+    <header>
+       
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">    
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h1>Sort Visualizer</h1>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+            
+                <div class="col-6">
+                    <label for="amount">Quantidade de Números</label>
+                    <input id="amount" type="number" min="1" max="500" class="form-control" value="100" />
+                </div>
+            
+                <div class="col-6">
+                    <label for="speed">Velocidade da Ordenação</label>
+                    <input id="speed" type="range" min="1" max="100" class="form-control" />
+                </div>
+            
+                <div class="col-6">
+                    <label for="sortingType">Tipo de Ordenação</label>
+                                        
+                    <select name="sortingType" id="sortingType" class="form-control">
+                        <option value="bubble">Bubble Sort</option>
+                        <option value="selection">Selection Sort</option>
+                    </select>
+            
+                </div>
+            
+            
+                <div class="col-6">
+                    <datalist id="presetColors">
+                        <option>#BF4565</option>
+                        <option>#93BFA3</option>
+                        <option>#F2EFC4</option>
+                        <option>#F2B680</option>
+                        <option>#F29999</option>
+                    </datalist>
+            
+                    <label for="cor">Cor</label>
+                    <input id="cor" type="color" class="form-control" value="#BF4565" list="presetColors" />
+                </div>
+            
+                <div class="col-12 mt-3">
+                    <button type="button" onclick="start(this)" class="btn btn-success btn-sm col-12">
+                        Iniciar
+                    </button>
+                </div>
+            </div>
+            
+            <div class="row mt-3 bg-secondary bg-opacity-25">
+                <div style="height:300px" class="row m-0 p-0" id="sort-container">
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - Jonny Mariani
+        </div>
+    </footer>
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+    <script src="js/log.js" asp-append-version="true"></script>
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script src="js/bubble-sort.js" asp-append-version="true"></script>
+    <script src="js/selection-sort.js" asp-append-version="true"></script>
+
+</body>
+</html>
