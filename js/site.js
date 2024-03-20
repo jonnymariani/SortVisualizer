@@ -207,10 +207,10 @@ async function start(btn) {
 
     switch (sortingType) {
         case SortTypes.Bubble:
-            await startBubbleSort(list, speed, msSpeed);
+            await startBubbleSort(list, msSpeed);
 
         case SortTypes.Selection:
-            await startSelectionSort(list, speed, msSpeed);            
+            await startSelectionSort(list, msSpeed);            
 
         default:
     }
